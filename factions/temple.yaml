@@ -1,0 +1,48 @@
+source: "factions/temple.yaml"
+entries:
+  - title: "The Shrine of the First Harvest"
+    scope_level: faction
+    scope_tags: ["temple", "millholm"]
+    content: |
+      The Shrine of the First Harvest is the temple in Millholm,
+      located at the southwest corner of the market square. Brother
+      Aldric leads the congregation and Sister Maeve assists with
+      training new initiates. The shrine is dedicated to the harvest
+      goddess and serves as both a place of worship and a centre for
+      healing and community service.
+
+  - title: "The Barrow Mounds"
+    scope_level: faction
+    scope_tags: ["temple", "millholm"]
+    content: |
+      South of Millholm beyond the town wall lie ancient barrow mounds
+      that have been sealed for generations. The temple teaches that
+      these burial sites must remain consecrated to prevent the dead
+      from rising. There have been disturbing reports recently —
+      strange lights seen near the barrows at night and an unnatural
+      chill in the air around them. The temple considers it a sacred
+      duty to investigate and reconsecrate the site if necessary.
+
+  - title: "The Undead Threat"
+    scope_level: faction
+    scope_tags: ["temple", "millholm"]
+    content: |
+      Necromancy is an abomination in the eyes of the temple. The
+      clergy are trained to detect and destroy undead, and to
+      consecrate ground to prevent their rising. The barrow mounds
+      south of town are the most likely source of undead activity in
+      the Millholm area. Brother Aldric has been quietly preparing
+      for the possibility that the wards on the barrows may be
+      failing. New initiates may be called upon to assist.
+
+  - title: "Temple Doctrine"
+    scope_level: faction
+    scope_tags: ["temple"]
+    content: |
+      The temple teaches that service to the community is the highest
+      calling. Healing the sick, feeding the hungry, and protecting
+      the vulnerable are sacred duties. Compassion is strength.
+      Initiates prove their worthiness not through combat but through
+      acts of kindness — the cleric initiation quest requires feeding
+      a beggar, not slaying a monster. Divine healing magic flows
+      from devotion, not study.

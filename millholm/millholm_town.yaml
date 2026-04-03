@@ -1,0 +1,175 @@
+source: "millholm/millholm_town.yaml"
+entries:
+  - title: "The Market Square"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      The market square sits at the crossroads where the Old Trade Way
+      meets the north-south road. It is a three-by-three open area with
+      a founding monument at its centre and a noticeboard where jobs and
+      requests are posted. The guild halls cluster around the south end
+      of the square. Most everything in town is within easy walking
+      distance of the square.
+
+  - title: "Market Square Corners"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      The northwest corner of the market square has the Harvest Moon Inn
+      and the Silken Thread clothing shop run by Madame Colette. The
+      northeast corner has the Goldencrust Bakery where Bron the baker
+      works, and the town stables. The southwest corner has the Millholm
+      General Store run by Merchant Harlow. The southeast corner has the
+      Order of the Golden Scale, which is the Millholm branch of the bank.
+
+  - title: "The Harvest Moon Inn"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      The Harvest Moon Inn is the social heart of Millholm, at the
+      northwest corner of the market square. Rowan the bartender has
+      run it for twenty years and knows everyone in town. It serves ale
+      and stew and offers rooms for travellers. It is the first place
+      newcomers usually find when they arrive in town. The cellar
+      beneath the inn has had a rat problem recently.
+
+  - title: "Old Trade Way West — North Side"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Heading west along the Old Trade Way from the market square, the
+      north side of the road has the Silken Thread clothing shop with
+      Madame Colette near the square, then Ironclad Armour where Durga
+      Ironplate sells armour, and further out near the edge of town is
+      Grik's Blades and Blunts, a weapon shop run by Grik the goblin.
+
+  - title: "Old Trade Way West — South Side"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Heading west along the Old Trade Way from the market square, the
+      south side of the road has the Millholm General Store run by
+      Merchant Harlow near the square, then Gareth Stonefield's house
+      — the finest house in town — and further out near the edge of
+      town is an old abandoned house that nobody has lived in for years.
+
+  - title: "Old Trade Way East — North Side"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Heading east along the Old Trade Way from the market square, the
+      north side of the road has the Goldencrust Bakery with Bron the
+      baker near the square, then the Bubbling Flask potion shop run by
+      Fizwick, and the Gilded Window jewellery shop with Polished Pim.
+
+  - title: "Old Trade Way East — South Side"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Heading east along the Old Trade Way from the market square, the
+      south side of the road has the Order of the Golden Scale bank near
+      the square, then the Millholm Post Office, and further out near
+      the edge of town is the Millholm Library.
+
+  - title: "The Guild Halls"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Millholm has three guild halls clustered around the south end of
+      the market square. The Circle of the First Light, the mages guild
+      led by Archmage Tindel, is at the southeast corner. The Shrine of
+      the First Harvest, the temple where Brother Aldric tends to the
+      faithful, is at the southwest corner. The Iron Company, the
+      warriors guild led by Sergeant Grimjaw, is just south of the
+      square on the south road.
+
+  - title: "Artisan's Way and the Workshops"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Artisan's Way is a lane at the south end of town where all the
+      craft workshops are found. The blacksmith workshop, woodshop,
+      jewellery workshop, leatherworker, apothecary, and tailor all
+      have their workshops along Artisan's Way. If you need something
+      made from raw materials this is where to go. The bakery is the
+      one exception — Bron's Goldencrust Bakery is up at the northeast
+      corner of the market square.
+
+  - title: "South Road and the Southern Crossroads"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      The south road heads from the market square toward the southern
+      district. Where it crosses Artisan's Way there is a small
+      crossroads. The Mortar and Pestle apothecary is on the northeast
+      corner, a vacant workshop on the northwest corner, the Gaol on
+      the southeast corner where the gaoler Grubb keeps watch, and the
+      Broken Crown inn on the southwest corner — a rougher drinking
+      hole than the Harvest Moon. South of that crossroads is the south
+      gate with a larger guard contingent than usual due to increased
+      gnoll and bandit activity.
+
+  - title: "The Farms West of Town"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      The farms are west of town along the Old Trade Way. The Goldwheat
+      wheat farm and the Brightwater cotton farm are out that way, along
+      with an old abandoned farmstead that nobody talks much about. The
+      cotton mill is just out of town to the west. The wheat mill is as
+      far west as the Old Trade Way can take you. The farms are quiet
+      and safe — rabbits and crows are about the worst you will find.
+
+  - title: "The Industries East of Town"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      The smelter and sawmill are on the eastern edge of town where the
+      Old Trade Way heads out toward the woods. The smelter turns raw
+      ore into ingots and alloys — copper and tin into bronze. The
+      sawmill processes wood into timber. They are noisy, dirty
+      operations placed at the town's edge for good reason.
+
+  - title: "The Woods East of Town"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      East of town past the smelter and sawmill the woods begin. South
+      of the road is the Trapper's Hut where Old Buckshaw tans hides,
+      but be careful of the wolves out that way. North of the road the
+      woods grow denser and more dangerous — the deep woods are in
+      there, with dire wolves prowling the shadows. Somewhere deep in
+      those woods is the old abandoned mine, but the track has grown
+      over from years of disuse and the way is hard to find.
+
+  - title: "North of Town"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Heading north out of the market square, the cemetery is just
+      outside town on the west side of the road. Further north the road
+      leads to the lake, where the Millholm Junior Sailing Club sits on
+      the shore with its old sailor trainer who teaches newcomers the
+      basics of seamanship.
+
+  - title: "The Southern District"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      South of the town wall is the rougher part of Millholm. The gnolls
+      have been pushing up from the south and some of the farms down
+      there have been abandoned. The gnolls will not come near the town
+      itself but they are happy to attack anyone straying south. Some
+      local bandits have been holing up in the abandoned farmsteads
+      trying to stay safe from the gnolls themselves. Most townsfolk
+      advise newcomers to be careful heading south of the wall.
+
+  - title: "The Sewers"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      There are sewers beneath the town built from ancient stonework
+      far older than Millholm itself. Most people know the sewers exist
+      but are not sure how to get down there. The stonework has strange
+      weathered symbols that nobody can read. Respectable folk have no
+      reason to go poking around underground.

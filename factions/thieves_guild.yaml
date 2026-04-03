@@ -1,0 +1,57 @@
+source: "factions/thieves_guild.yaml"
+entries:
+  - title: "The Thieves Guild Headquarters"
+    scope_level: faction
+    scope_tags: ["thieves_guild", "millholm"]
+    content: |
+      The thieves guild headquarters are hidden in the sewers beneath
+      Millholm. There are two known entrances — one beneath the Harvest
+      Moon Inn through the cellar, and another through the old abandoned
+      house on the Old Trade Way next to Gareth Stonefield's residence.
+      The guild operates in complete secrecy. Nobody above ground knows
+      it exists.
+
+  - title: "Gareth Stonefield and the Guild"
+    scope_level: faction
+    scope_tags: ["thieves_guild", "millholm"]
+    content: |
+      Gareth Stonefield is the head of the thieves guild. He maintains
+      an impeccable reputation above ground as the wealthiest merchant
+      in Millholm, living in the finest house on the Old Trade Way. He
+      launders guild profits through his legitimate business interests.
+      Nobody suspects the truth. His second-in-command is Vex, who runs
+      the night operations. Whisper handles training of new recruits.
+
+  - title: "Ratwick the Fence"
+    scope_level: faction
+    scope_tags: ["thieves_guild", "millholm"]
+    content: |
+      Ratwick operates as the guild's fence out of the Broken Crown inn
+      in the southern crossroads. He buys and sells goods of questionable
+      provenance. He keeps a low profile and does not advertise his
+      services to strangers. Only guild members and trusted associates
+      know what he really does there.
+
+  - title: "The Magpie and the Rooftop Faction"
+    scope_level: faction
+    scope_tags: ["thieves_guild", "millholm"]
+    content: |
+      A small rebel faction of thieves led by a rogue known as the
+      Magpie has taken control of the rooftops above the town. There
+      is an ongoing turf war between the guild proper and the Magpie's
+      crew. The rooftops can be reached through an abandoned workshop
+      on Artisan's Way, and there are rumours that Gareth Stonefield
+      has a secret way up there as well. The Magpie's people do not
+      welcome strangers on their turf — approach with caution.
+
+  - title: "The Sewer Layout"
+    scope_level: faction
+    scope_tags: ["thieves_guild", "millholm"]
+    content: |
+      The sewers beneath Millholm are built from ancient stonework far
+      older than the town. The tunnels branch and twist but the guild
+      knows the routes well. The headquarters are hidden behind a
+      crumbling wall that conceals the entrance to the guild chambers.
+      The ancient stonework has strange symbols that even the guild
+      has not been able to decipher. There may be deeper passages that
+      have not yet been explored.

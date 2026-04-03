@@ -1,0 +1,50 @@
+source: "factions/warriors_guild.yaml"
+entries:
+  - title: "The Iron Company"
+    scope_level: faction
+    scope_tags: ["warriors_guild", "millholm"]
+    content: |
+      The Iron Company is the warriors guild in Millholm, housed in
+      a guild hall just south of the market square on the south road.
+      Sergeant Grimjaw leads the chapter and Corporal Hask handles
+      training of new recruits. The Iron Company is responsible for
+      the defence of Millholm and maintains close ties with the town
+      guard. Members are expected to be ready to fight when called upon.
+
+  - title: "The Gnoll Threat — Scouting Report"
+    scope_level: faction
+    scope_tags: ["warriors_guild", "millholm"]
+    content: |
+      A scouting party sent south last week has reported back on the
+      gnoll encampments beyond the town wall. There are an estimated
+      thirty to forty gnolls in the main camp, armed mostly with crude
+      spears and clubs, though a few carry scavenged bronze weapons.
+      They are led by a warlord who is larger and better armed than
+      the rest. The gnolls are cowardly individually but fight with
+      pack tactics — they try to surround and overwhelm. The scouts
+      recommend against engaging the main camp without a well-armed
+      party of at least four.
+
+  - title: "Town Defence Responsibilities"
+    scope_level: faction
+    scope_tags: ["warriors_guild", "millholm"]
+    content: |
+      The Iron Company shares responsibility for town defence with
+      the town guard. The guard handles day-to-day patrols and gate
+      security while the Iron Company trains fighters and responds to
+      serious threats. The south gate has been reinforced recently
+      due to increased gnoll and bandit activity. The Company has
+      also been running extra patrols along the southern roads and
+      keeping a closer watch on the approaches to the farms.
+
+  - title: "Warrior Philosophy"
+    scope_level: faction
+    scope_tags: ["warriors_guild"]
+    content: |
+      The Iron Company teaches that strength solves problems. A
+      warrior's duty is to step up and handle threats that others
+      cannot. Training focuses on discipline, endurance, and mastery
+      of arms. Every weapon has its strengths and a good warrior
+      learns to use several. The initiation test is simple and
+      direct — clear a threat to the community. No tricks, no
+      puzzles. Just courage and steel.

@@ -1,0 +1,62 @@
+source: "continental.yaml"
+entries:
+  - title: "The Shadow War"
+    scope_level: continental
+    scope_tags: []
+    content: |
+      Over two thousand years ago a great shadow spread across the
+      continent, plunging the world into a century of darkness and war.
+      The kingdoms united against it and eventually prevailed, but at
+      terrible cost. Entire cities were lost, and much knowledge of the
+      age before was destroyed. The Shadow War is the most significant
+      event in recorded history and every culture on the continent marks
+      its end as the start of the modern calendar.
+
+  - title: "The Old Trade Way"
+    scope_level: continental
+    scope_tags: []
+    content: |
+      The Old Trade Way is the great east-west road that crosses the
+      continent. It connects the farming communities of the northwest
+      to the dwarven mountain holds in the east and the port city of
+      Saltspray Bay on the coast. Most towns on the continent grew up
+      along this road or its branches. It is well-maintained near
+      settlements but increasingly wild and dangerous between them.
+
+  - title: "The Ancient Builders"
+    scope_level: continental
+    scope_tags: []
+    content: |
+      Beneath some of the oldest settlements lie ruins of carved stone
+      far older than anything built by the current civilisations.
+      Deliberate symbols too weathered to read, passages that lead
+      nowhere, chambers with no obvious purpose. Nobody knows who the
+      Ancient Builders were or what happened to them. Scholars debate
+      whether they predate the Shadow War or were destroyed by it.
+      Fragments of their stonework have been found across the continent.
+
+  - title: "The Five Nations"
+    scope_level: continental
+    scope_tags: []
+    content: |
+      The continent is home to five recognised nations. The human
+      kingdoms dominate the fertile lowlands and coasts. The dwarven
+      holds control the Ironback Peaks and their rich mineral deposits.
+      The halflings tend the gentle farmlands of Cloverfen. The elves
+      keep to the ancient forest of Aethenveil in the south. And the
+      Shadowsward, a militarised border region, stands as a permanent
+      bulwark against the blighted lands to the west where the shadow
+      once held strongest.
+
+  - title: "Continental Geography"
+    scope_level: continental
+    scope_tags: []
+    content: |
+      The continent stretches from temperate farmland in the northwest
+      to tropical coasts in the south. Millholm sits in the northwest,
+      a quiet farming region. The Ironback Peaks rise to the east,
+      snow-capped and rich with ore. South of the mountains lie the
+      rolling hills of Cloverfen and beyond that the bustling port of
+      Saltspray Bay. Further south the land grows hotter — the Scalded
+      Waste is a vast desert separating the known lands from the
+      mysterious southern forests and coasts.

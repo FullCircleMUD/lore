@@ -1,0 +1,54 @@
+source: "factions/mages_guild.yaml"
+entries:
+  - title: "The Circle of the First Light"
+    scope_level: faction
+    scope_tags: ["mages_guild"]
+    content: |
+      The Mages Guild in Millholm is formally known as the Circle of
+      the First Light. It is a chapter of a larger continent-wide
+      magical order. The Millholm chapter is small but respected,
+      housed in a modest guild hall in town. Archmage Tindel leads the
+      chapter and Apprentice Selene assists with training new members.
+      The guild values knowledge, curiosity, and disciplined study
+      above all else.
+
+  - title: "The Ley Line Convergence"
+    scope_level: faction
+    scope_tags: ["mages_guild"]
+    content: |
+      Beneath Millholm lies an unusual convergence of ley lines —
+      channels of ambient magical energy that flow through the earth.
+      This convergence is the reason the Circle of the First Light
+      established a chapter here. The ley lines are poorly understood
+      even by the guild's scholars, but they make Millholm a
+      surprisingly potent location for magical research and practice.
+      The convergence may also explain the Ancient Builder ruins
+      beneath the town — perhaps they knew of the ley lines too.
+
+  - title: "Arcane Dust and the Faerie Hollow"
+    scope_level: faction
+    scope_tags: ["mages_guild"]
+    content: |
+      Arcane dust is a rare and valuable magical reagent found only
+      in a hidden faerie hollow deep in the woods north of Millholm.
+      The hollow is concealed by powerful glamour — only those who
+      can see through illusions will find the entrance. The faeries
+      who dwell there are ancient and powerful. They tolerate
+      respectful visitors but will destroy anyone who shows aggression
+      or greed. Guild initiates are sent to collect arcane dust as
+      their entrance trial — it tests curiosity and respect, not
+      brute force.
+
+  - title: "Magical Theory Fundamentals"
+    scope_level: faction
+    scope_tags: ["mages_guild"]
+    content: |
+      Magic flows through the world in seven recognised schools:
+      Evocation, Abjuration, Necromancy, Divine Healing, Divination,
+      Conjuration, and Illusion. A mage learns spells from scrolls
+      and memorises them into prepared slots. Casting a spell consumes
+      mana, which regenerates over time. Mastery of a spell improves
+      with practice — a grandmaster evocationist's fireball is far
+      more devastating than an apprentice's. The guild teaches that
+      understanding the theory behind magic is as important as the
+      ability to cast it.

@@ -1,0 +1,97 @@
+source: "millholm/regional.yaml"
+entries:
+  - title: "Founding of Millholm"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      Millholm was founded roughly four hundred years ago by four
+      families from the eastern coast: the Stonefields, the
+      Brightwaters, the Goldwheats, and the Ironhands. They followed
+      the Old Trade Way westward until they found a crossroads with
+      good soil and fresh water, and decided to settle. The original
+      settlement grew up around what is now the Harvest Moon Inn.
+
+  - title: "Millholm Economy"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      Millholm is a farming and crafting community. The western farms
+      produce wheat and cotton. The eastern woods provide timber. A
+      small copper and tin mine lies beyond the deep woods to the
+      north, though it has been largely abandoned due to kobold
+      infestation. The town has a smelter, sawmill, smithy, and a
+      range of craft workshops. Trade flows along the Old Trade Way
+      to the dwarven holds in the east and other settlements beyond.
+
+  - title: "The Four Founding Families"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      The Stonefields became merchants and landowners — Gareth
+      Stonefield is the wealthiest man in town and lives in the finest
+      house on the Old Trade Way. The Goldwheats became farmers and
+      still run the main wheat farm west of town. The Brightwaters
+      settled the cotton fields. The Ironhands were smiths and soldiers
+      whose descendants now serve in the town guard and the Iron
+      Company. All four families have tombs in the Millholm cemetery.
+
+  - title: "Millholm Town Layout"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      The town sits at a crossroads. The Old Trade Way runs east to
+      west as the main thoroughfare. A smaller north-south road crosses
+      it at the market square. The market square is the heart of town
+      with a founding monument, noticeboard, and shops. The Harvest
+      Moon Inn is just off the square. Guild halls, the bank, and
+      craft workshops line the surrounding streets. Farms are to the
+      west, woods and industries to the east, and the rougher southern
+      district lies beyond the town wall.
+
+  - title: "Dangers Around Millholm"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      The area around Millholm is mostly safe but not without danger.
+      Wolves roam the woods to the east. Kobolds have infested the
+      abandoned mine beyond the deep woods. Gnolls raid from the
+      grasslands to the south — they are cowardly but dangerous in
+      groups. The deep woods themselves are treacherous and easy to
+      get lost in. The southern district beyond the town wall is
+      rougher, with bandits and outlaws on the fringes.
+
+  - title: "The Deep Woods"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      North of the main road the woods grow dense and tangled. The
+      deep woods are a dangerous, disorienting place where the trees
+      grow so thick that daylight barely reaches the ground. Somewhere
+      in the depths lies the path to the abandoned mine. Wolves and
+      worse make their home here. Locals warn travellers not to enter
+      alone. There are rumours of strange lights and hidden clearings
+      deep within, but most folk dismiss these as woodcutter's tales.
+
+  - title: "The Abandoned Mine"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      Beyond the deep woods lies an old copper and tin mine that was
+      abandoned years ago when kobolds moved in. The mine still holds
+      good ore — copper and tin for bronze-making — but the kobold
+      infestation makes it dangerous. Small, vicious, and smart enough
+      to set traps, the kobolds have made the mine their territory.
+      A miners' camp outside the entrance is all that remains of the
+      original operation.
+
+  - title: "The Gnoll Raids"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      Gnolls occupy the wild grasslands south of Millholm, beyond the
+      town wall. They are hyena-like raiders — cowardly individually
+      but dangerous in packs. They occasionally raid outlying farms
+      and ambush travellers on the southern roads. The town guard keeps
+      them at bay but never quite manages to drive them off for good.
+      A gnoll warlord is said to command the largest camp, though few
+      have seen it and returned.

@@ -124,9 +124,12 @@ def get_existing(conn, backend: str, source: str, title: str) -> dict | None:
     )
     if backend == "sqlite":
         sql = sql.replace("%s", "?")
-    with conn.cursor() as cur:
+    cur = conn.cursor()
+    try:
         cur.execute(sql, (source, title))
         row = cur.fetchone()
+    finally:
+        cur.close()
     if not row:
         return None
     if backend == "postgres":
@@ -148,7 +151,8 @@ def upsert_postgres(conn, source: str, entry: dict, vec: list[float]) -> str:
 
     vec_np = np.asarray(vec, dtype=np.float32)
     now = datetime.now(timezone.utc)
-    with conn.cursor() as cur:
+    cur = conn.cursor()
+    try:
         cur.execute(
             """
             INSERT INTO ai_memory_lorememory
@@ -175,6 +179,8 @@ def upsert_postgres(conn, source: str, entry: dict, vec: list[float]) -> str:
             ),
         )
         inserted = cur.fetchone()[0]
+    finally:
+        cur.close()
     return "created" if inserted else "updated"
 
 
@@ -249,9 +255,12 @@ def prune_orphans(conn, backend: str, source: str, valid_titles: set[str]) -> in
         f"WHERE source = {'%s' if backend == 'postgres' else '?'} "
         f"AND title NOT IN ({placeholders})"
     )
-    with conn.cursor() as cur:
+    cur = conn.cursor()
+    try:
         cur.execute(sql, (source, *sorted(valid_titles)))
         return cur.rowcount
+    finally:
+        cur.close()
 
 
 # ── YAML walking ─────────────────────────────────────────────────────

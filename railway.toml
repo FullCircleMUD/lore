@@ -1,0 +1,16 @@
+# Railway service config for the lore importer.
+#
+# This deploys the standalone tool in tools/import_lore.py as a
+# one-shot Railway service. Each git push to main triggers a fresh
+# deploy that runs the importer and exits.
+#
+# DATABASE_URL and OPENAI_API_KEY must be set in the Railway dashboard
+# (reference the game service's variables of the same name).
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "pip install -r tools/requirements.txt"
+
+[deploy]
+startCommand = "python tools/import_lore.py"
+restartPolicyType = "NEVER"

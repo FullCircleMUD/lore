@@ -68,30 +68,80 @@ entries:
 
 ## Importing Lore
 
-From the game directory (`FCM/src/game/`), with the venv activated:
+The importer is a **standalone Python tool** in [`tools/`](tools/). It
+talks directly to the game's `ai_memory` database via psycopg
+(Postgres) or sqlite3 (local SQLite) — no Django, no Evennia
+dependency. The same script runs locally for development and on
+Railway in production.
+
+**Why standalone:** the Railway game container does not include this
+lore repo, so an in-game management command can never see the YAML
+files in production. Decoupling lets the importer deploy as its own
+Railway service in the same project as the game, sharing
+`DATABASE_URL` and `OPENAI_API_KEY` via Railway service references.
+
+### Local usage
 
 ```bash
-# Import all YAML files from this repo
-evennia lore_import
-
-# Import a specific file
-evennia lore_import --file millholm/regional.yaml
-
-# Preview what would happen without making changes
-evennia lore_import --dry-run
-
-# Override the lore directory path
-evennia lore_import --lore-dir /path/to/lore
+cd tools
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env               # edit OPENAI_API_KEY (DATABASE_URL defaults to local SQLite)
+set -a; source .env; set +a        # Windows PowerShell: see tools/README.md
+python import_lore.py
 ```
 
-The default lore directory is auto-detected as `FCM/lore/` relative to the game directory.
+**Flags:**
+- `python import_lore.py` — full import, embeds new/changed entries
+- `python import_lore.py --dry-run` — preview, no DB writes, no OpenAI calls
+- `python import_lore.py --prune` — also delete DB entries no longer present in YAML (off by default — accidental file deletion would otherwise wipe live lore)
 
-**The import is idempotent:**
-- New entries are created and embedded
-- Entries with changed content are updated and re-embedded
-- Unchanged entries are skipped (no wasted API calls)
+**Idempotent.** Entries are matched on `(source, title)`:
+- New entry → created and embedded
+- Content changed → updated and re-embedded
+- Content unchanged → skipped (no wasted API calls)
 
-The game server does not need to be running. After import, all NPCs with `llm_use_lore=True` immediately have access to the new knowledge — no restart required.
+The game server does not need to be running. After import, all NPCs
+with `llm_use_lore=True` immediately have access to the new knowledge
+— no restart required.
+
+### Railway deployment
+
+The tool is deployed as a separate Railway service in the same project
+as the game. Each push to this lore repo auto-triggers a fresh deploy
+that runs the import and exits.
+
+**One-time setup in the Railway dashboard:**
+
+1. **+ New Service → GitHub Repo → FullCircleMUD/lore**
+2. **Settings → Service:**
+   - Root directory: `tools/`
+   - Start command: `python import_lore.py`
+   (Or rely on the [`railway.toml`](railway.toml) at the repo root,
+   which sets these declaratively.)
+3. **Settings → Variables:** add two variables, both as **references**
+   to the game service's variables of the same name (so they always
+   match, no copy/paste):
+   - `DATABASE_URL` → reference game service's `DATABASE_URL`
+   - `OPENAI_API_KEY` → reference game service's `LLM_EMBEDDING_API_KEY`
+4. **Settings → Deploy:** auto-deploy on push to `main`.
+5. Trigger the first deploy. Watch logs — should report
+   `Created: N` and exit code 0.
+
+**Each subsequent push** to this repo auto-deploys the service, which
+re-runs `import_lore.py`. Unchanged entries are skipped, so it's cheap.
+Railway marks the deployment as "Removed" after the script exits —
+that's the standard pattern for one-shot jobs.
+
+**Important:** the standalone tool depends on a unique constraint
+`(source, title)` on the `ai_memory_lorememory` table. That constraint
+is added by game-side migration
+`ai_memory/0005_lorememory_unique_source_title.py`. Apply that
+migration on the game service first (it's part of `deploy_migrate.py`)
+before deploying this lore service for the first time.
+
+See [tools/README.md](tools/README.md) for full troubleshooting notes.
 
 ---
 

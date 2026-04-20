@@ -1,0 +1,10 @@
+# Nixpacks build config for the lore importer.
+#
+# The requirements.txt lives at tools/requirements.txt (not the repo
+# root), so Nixpacks' auto-detection of Python misses it. Declare the
+# Python provider explicitly and point install at the right file.
+
+providers = ["python"]
+
+[phases.install]
+cmds = ["pip install -r tools/requirements.txt"]

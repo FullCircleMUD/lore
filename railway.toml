@@ -9,7 +9,7 @@
 
 [build]
 builder = "NIXPACKS"
-buildCommand = "pip install -r tools/requirements.txt"
+# Build command comes from nixpacks.toml (Python provider + tools/requirements.txt)
 
 [deploy]
 startCommand = "python tools/import_lore.py"

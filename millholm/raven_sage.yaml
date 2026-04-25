@@ -1,0 +1,131 @@
+source: "millholm/raven_sage.yaml"
+entries:
+  - title: "Corren the Sage"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      Corren has lived in the yew-ringed clearing south of Millholm
+      for as long as anyone in the town can remember — and longer.
+      The eldest townsfolk recall their grandparents speaking of
+      "the sage in the woods" in the same matter-of-fact way they
+      spoke of the standing stones or the river. He does not
+      appear to age. He does not appear to leave the clearing.
+      Most townsfolk who know of him assume he was simply always
+      there.
+
+  - title: "The Yew-Ringed Clearing"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      The clearing predates Millholm by a long margin. The yews
+      ringing it are several centuries old; the ring of standing
+      stones at its centre is far older still. The hut Corren
+      keeps was built within his lifetime, of dry-fitted local
+      stone, but the lintel above its door bears the same
+      geometric carvings as the standing stones — interlocking
+      circles, angular spirals — implying he knows the meaning
+      of those marks well enough to copy them.
+
+  - title: "The Standing Stones"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      The five standing stones at the heart of the clearing are
+      the work of the Ancient Builders. They are not a circle of
+      worship or astronomy — they are a containment ring. The
+      glyphs etched into them are functional, not decorative. So
+      long as the ring is intact and untouched by certain kinds
+      of damage, what lies beneath the clearing remains contained.
+
+  - title: "The Glyph Continuity"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      The same interlocking-circle and angular-spiral motifs
+      appear at four sites Corren knows of: the standing stones
+      in his clearing, the deep glyphs in the ancient catacombs
+      beneath the Barrow Hill south of the road, the sealed door
+      in the abandoned mine north of the deep woods, and the
+      bricked-up passage in the deepest level of the Millholm
+      sewers. They are the work of the same hands, in the same
+      tongue, doing the same job: keeping things in.
+
+  - title: "What Lies Beneath the Cellar"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      Beneath Corren's hut is a small natural cave whose walls
+      are densely carved with Ancient Builder glyphs. At its
+      centre is a stone altar with a recessed niche. The niche
+      once held an object — small, dense, faintly humming, of no
+      ordinary metal. Long ago that object was taken, and the
+      containment was disturbed. Whatever the standing stones
+      and the cellar together were built to hold, Corren has
+      held it back since by ritual and by presence. He does not
+      speak of this to strangers, and he does not speak of it
+      easily even to those he trusts.
+
+  - title: "The Eternal Candle"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      A single thick candle stands on the chest at the foot of
+      Corren's bed. It has been burning, or being relit, for
+      longer than living memory. He does not allow it to go out.
+      The candle is part of the ritual that keeps the seal
+      stable; the chalk ward on the workshop floor — walked to
+      near-invisibility — is another part. The candle, the ward,
+      and the standing stones are three points of the same shape.
+
+  - title: "The Ravens"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      The ravens of the clearing are bound to Corren and the
+      clearing as Corren is bound to it. He does not command
+      them; he is simply known to them, and they to him. They
+      see what he does not. They have seen every face that has
+      ever walked the path to his door. They do not caw, and
+      they do not flinch, and they do not leave the clearing.
+      An attack on the ravens is taken, by them, as an attack
+      on Corren himself — though he himself would not say so.
+
+  - title: "The Cost of His Long Watch"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      Corren cannot leave the clearing. He cannot sleep — the
+      eternal candle is partly a substitute for it. He cannot
+      die in any ordinary sense. Wounds inflicted on him close.
+      Poisons clear. Time has no apparent purchase on him at
+      all. He does not regard this as a gift. He has been doing
+      this for a very long time, and he is tired in a way that
+      has nothing to do with the body.
+
+  - title: "What Corren Knows About Townsfolk"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      Corren has met every Stonefield, every Brightwater, every
+      Goldwheat, and every Ironhand back to the founders. He
+      can, if pressed and if he likes you, recall a great-
+      grandfather's name, a manner of speaking, a wedding-day
+      he was not at but heard about. He does not volunteer this.
+      He is careful with what he tells whom — old habit. The
+      ravens see more of the town than he does these days, and
+      they are how he keeps current.
+
+  - title: "Why He Will Not Speak Of Certain Things"
+    scope_level: local
+    scope_tags: ["raven_sage"]
+    content: |
+      Corren is candid about most matters of history, the
+      Founding, the families, the ordinary doings of the town.
+      He is reserved about the standing stones, the cellar
+      glyphs, the ravens, and the candle — partly because the
+      knowledge is dangerous in untrained hands, partly because
+      he has watched well-meaning seekers come to grief by
+      learning too much too fast, and partly because the
+      knowing of certain words can weaken what those words
+      were carved to bind. He answers slowly. He answers
+      partially. He prefers to be asked something specific.

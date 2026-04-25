@@ -1,0 +1,121 @@
+source: "factions/merry_bandits.yaml"
+entries:
+  - title: "The Camp's Real Location"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      The camp sits in the abandoned Hollyrise farmstead, off two
+      narrow trails through the deep woods south of the Goldwheats.
+      The northerly trail comes in from the moonpetal clearing; the
+      southerly trail joins the main forest path at the old ravine.
+      The watchtower above the barn covers both approaches. Anyone
+      arriving by either trail will be heard from a long way off,
+      particularly by Blynken, who does not need to see them to mark
+      them.
+
+  - title: "The Manifesto"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Pinned to the canvas wall of the Planning Tent is the camp's
+      working code, in Bobbin's hand: "We rob only those who can
+      spare it, and give to those who cannot." Around the original
+      are amendments and grumpy counter-arguments in five different
+      hands. The Friar's amendments are the most serious. Maryann's
+      are the most useful. Wille's are mostly about clothing.
+
+  - title: "The Barn Ledger"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Every item taken on a job is recorded in the barn ledger, kept
+      by Maryann and read aloud at the common fire on the first night
+      of every month. The ledger notes where each thing came from so
+      it can, in theory, be returned one day. About one item in five
+      actually has been. The exercise still matters to the band more
+      than the success rate suggests.
+
+  - title: "Bobbin's Real Story"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Bobbin Goode is not the name he was born with. He was a player
+      in a small travelling company some years back, run out of a town
+      to the east after a performance he refuses to discuss. He
+      fetched up in the southern woods alone, slept in the abandoned
+      Hollyrise farmstead for a winter, and started taking from
+      passing wagons because he was hungry. The performance came back
+      later. The hunger never quite left.
+
+  - title: "Maryann is the One Who Runs This"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Maid Maryann keeps the books, draws the maps, edits Bobbin's
+      plans before they kill anyone, and decides — by the marks on
+      her countryside map — which farms can spare a wagon and which
+      cannot. The band do not work farms she has not marked. Bobbin
+      is the face. Maryann is the shape. Everybody in camp knows it;
+      nobody but the Friar will say it out loud, and only when she is
+      not in earshot.
+
+  - title: "The Goldwheat Promise"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Three of the band came out of the Goldwheat fields after the
+      gnoll raids, and one of those is Bobbin's cousin on his
+      mother's side. The standing rule of the camp is that no
+      Goldwheat wagon is touched. If a Goldwheat wagon is harmed by
+      anyone claiming to be of the band, the band will know within
+      the day and the matter will be settled internally. This rule
+      is not negotiable.
+
+  - title: "The Ravine Ambush"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      The southerly forest track narrows at the old ravine into a
+      chokepoint where a wagon cannot turn. The band uses it
+      sparingly — a single ambush per moon, to keep the path's
+      reputation alive without making it impassable. Lyttle Jhon
+      picks the wagons. Wille covers the road. Maryann picks the
+      date. Travellers on foot, alone, or carrying nothing of weight
+      are waved through.
+
+  - title: "Blynken's System"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Blynken is blind and the band's lookout is sound. The path
+      narrows enough at the watchtower that only one wagon at a time
+      can pass below, and Blynken can identify nearly every regular
+      traveller of the south road by their gait, their team, or the
+      rhythm of their wheel. The copper horn on the watchtower
+      platform sounds once for friends, twice for unknowns, three
+      times for trouble. The system is not infallible. It is a great
+      deal better than the band's vision combined.
+
+  - title: "Friar Pluck's Order"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      Friar Pluck did not retire from his order. He was asked to
+      leave, on terms that were polite but firm, after a disagreement
+      about the right way to deal with a tithe-collector. He will not
+      give details, but the broad shape is known to Maryann and
+      through her to Bobbin. He has a small standing arrangement with
+      someone in the Millholm temple — a quiet exchange of letters
+      and the occasional jar of preserve. The arrangement is not
+      common knowledge in the camp.
+
+  - title: "What to Do If the Watch Comes"
+    scope_level: faction
+    scope_tags: ["merry_bandits", "millholm"]
+    content: |
+      If the town watch ever comes up the trail in numbers, the
+      camp's plan is to scatter into the deep woods by the old kiln
+      track and re-form at the Hollyrise hayrick three days later.
+      Bobbin will not be the first to leave and Lyttle Jhon will not
+      be the second. Maryann goes first with the ledger. The plan has
+      been rehearsed twice and not yet needed.

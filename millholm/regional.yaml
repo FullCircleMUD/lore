@@ -110,3 +110,38 @@ entries:
       Most townsfolk know of him in vague terms only and have no
       particular reason to seek him out. Children are warned away
       from the clearing, more from old habit than any real concern.
+
+  - title: "The Bandits and the Goldwheats"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      The Goldwheat farm out past the cotton mill lost a cart-harness
+      to bandits a while back, and someone — nobody saw who — left it
+      returned at the gate a fortnight later, with a written apology
+      and the harness mended. The Goldwheats themselves will not speak
+      ill of Bobbin Goode in public; in private, opinions vary
+      depending on which Goldwheat you ask. Some quietly maintain that
+      the bandits will not touch a Goldwheat wagon and have not done
+      in some years.
+
+  - title: "Travel Advisory: The South Forest Tracks"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      The forest tracks south of Millholm are unsafe for travellers
+      carrying anything of value. The southerly path through the
+      ravine in particular is a known ambush point, and merchant
+      wagons that try to push through alone often do not arrive on
+      the far side with what they set out with. The town gaol
+      recommends travelling in groups, in daylight, and not arguing
+      if hailed. Most who follow this advice come through unhurt.
+
+  - title: "The Town Watch's Position on Bobbin Goode"
+    scope_level: regional
+    scope_tags: ["millholm"]
+    content: |
+      Official Millholm policy is that Bobbin Goode and his band are
+      wanted bandits, and that the town watch would dearly like them
+      brought in. Unofficial Millholm policy, by long observation, is
+      that the watch has not pushed the matter as hard as it might.
+      There are quiet rumours about why. None of them are settled.

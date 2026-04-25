@@ -174,3 +174,40 @@ entries:
       but are not sure how to get down there. The stonework has strange
       weathered symbols that nobody can read. Respectable folk have no
       reason to go poking around underground.
+
+  - title: "Bobbin Goode and the Tights-Bandits"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      There is a bandit chief in the southern woods who calls himself
+      Bobbin Goode and dresses, by most accounts, in green-and-gold
+      striped tights. His band has been working the south road for two
+      or three years now, robbing wagons on their way through the
+      abandoned farmsteads. By repute he never kills if he can help it,
+      and a fair few of those he has robbed have come away with their
+      lives, their boots, and a single copper "for the poor" pressed
+      into their hand. Opinions in town are sharply divided as to
+      whether he is a problem or a folk hero.
+
+  - title: "The South-Road Pamphlets"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Small printed pamphlets denouncing "the so-called Bandit Goode"
+      turn up in town from time to time, nailed to gateposts or tucked
+      under tavern doors. Nobody is sure who prints them. The pamphlets
+      list grievances by date and wagon — most of them, on inspection,
+      against well-off merchants who have lost very little they cannot
+      replace. The town watch confiscates them. The town's children
+      memorise them.
+
+  - title: "Recruits from the Farms"
+    scope_level: local
+    scope_tags: ["millholm_town"]
+    content: |
+      Several of the farmhands who left the abandoned farmstead beyond
+      the Goldwheat fields after the gnoll raids never came back to
+      town. The story most farmsteads tell is that they took to the
+      woods and joined the bandits. The gaol has names on a list. The
+      list is not very actively pursued; the gaoler privately considers
+      it a poor use of the watch's time.

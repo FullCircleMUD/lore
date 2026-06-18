@@ -2,7 +2,7 @@
 
 Embedded world knowledge for NPC intelligence. YAML files in this repo are imported into the game's `LoreMemory` database, where they're embedded and retrieved semantically at runtime to give NPCs dynamic awareness of the world.
 
-See `design/LORE_MEMORY.md` in the design repo for the full system architecture.
+See `docs/lore-memory.md` in the design repo for the full system architecture.
 
 ---
 

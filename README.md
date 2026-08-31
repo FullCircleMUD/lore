@@ -1,44 +1,61 @@
 # FullCircleMUD — World Lore
 
-Embedded world knowledge for NPC intelligence. YAML files in this repo are imported into the game's `LoreMemory` database, where they're embedded and retrieved semantically at runtime to give NPCs dynamic awareness of the world.
+Embedded world knowledge for NPC intelligence. This repository is **content only**: YAML files, and a
+manifest naming them. They are read into the game's lore table by the `lore import` command, embedded,
+and retrieved semantically at runtime so NPCs can answer questions nobody hand-authored for them.
 
-See `docs/lore-memory.md` in the design repo for the full system architecture.
-
----
-
-## How It Works
-
-NPCs with `llm_use_lore=True` dynamically retrieve relevant lore at conversation time. When a player asks a bartender about the Shadow War, the system embeds the question, searches the lore database filtered by the NPC's scope tags, and injects the most relevant entries into the LLM prompt. The NPC's personality determines how they deliver the information.
-
-Different NPCs access different lore based on their **scope tags**:
-- **Continental** lore is available to every NPC (common knowledge)
-- **Regional** lore is available to NPCs in that zone (e.g. Millholm history for Millholm NPCs)
-- **Local** lore is available to NPCs in that district (e.g. farm knowledge for farm NPCs)
-- **Faction** lore is available to NPCs tagged with that faction (e.g. Mages Guild secrets for guild members)
+See `design/lore-memory.md` for the system architecture, and the
+[evennia-ai-memory](https://github.com/FullCircleMUD/evennia-ai-memory) library for the code that reads
+this repository.
 
 ---
 
-## Directory Structure
+## How it works
+
+NPCs with lore enabled retrieve relevant entries at conversation time. When a player asks a bartender
+about the Shadow War, the question is embedded, the lore is searched within the NPC's scope, and the
+best matches are put into the prompt. The NPC's personality decides how it delivers them.
+
+Which entries an NPC can reach is decided by **scope tags**:
+
+- **Continental** lore has no tags — every NPC knows it.
+- **Regional** lore is tagged with a zone, e.g. `millholm`.
+- **Local** lore is tagged with a district, e.g. `millholm_town`.
+- **Faction** lore is tagged with a faction, e.g. `mages_guild`.
+
+An entry is reachable only when **every** tag it carries is one the NPC holds. So an entry tagged
+`["millholm", "thieves_guild"]` reaches a guild member in Millholm and nobody else — not a Millholm
+baker, and not a thief in another city.
+
+---
+
+## Layout
 
 ```
+index.yaml                    # the manifest — names every content file
 continental.yaml              # world-wide common knowledge
 millholm/
     regional.yaml             # Millholm zone-level lore
-    millholm_town.yaml        # town district local knowledge
-    millholm_farms.yaml       # farms district local knowledge
-    ...
+    millholm_town.yaml        # town district
+    raven_sage.yaml           # a location's local knowledge
 factions/
-    mages_guild.yaml          # Mages Guild faction lore
-    thieves_guild.yaml        # Thieves Guild faction lore
-    temple.yaml               # Temple/Cleric faction lore
-    warriors_guild.yaml       # Warriors Guild faction lore
+    mages_guild.yaml
+    thieves_guild.yaml
+    temple.yaml
+    warriors_guild.yaml
+    merry_bandits.yaml
 ```
+
+**`index.yaml` is the manifest, and it is what the repository consists of.** The importer reads the
+paths it names; it does not go looking. A file that isn't listed is never imported, so add a new lore
+file to the manifest in the same commit that adds the file. A file listed but missing stops the import
+rather than passing quietly — that is deliberate, and it catches a deletion that forgot the list.
 
 ---
 
-## YAML Format
+## YAML format
 
-Each file contains a `source` identifier and a list of entries:
+Each file carries a `source` identifier and a list of entries:
 
 ```yaml
 source: "millholm/regional.yaml"
@@ -54,125 +71,69 @@ entries:
       good soil and fresh water, and decided to settle.
 ```
 
-**Required fields per entry:**
-- `title` — human-readable label (also used as the idempotent key with `source`)
-- `scope_level` — one of: `continental`, `regional`, `local`, `faction`
-- `scope_tags` — list of tags that determine who can access this entry
-  - Continental entries use `[]` (empty — everyone gets them)
-  - Regional entries use zone tags, e.g. `["millholm"]`
-  - Local entries use district tags, e.g. `["millholm_town"]`
-  - Faction entries use faction tags, e.g. `["mages_guild"]`
-- `content` — the lore text (paragraph-length, focused on one topic)
+Every entry needs all four fields:
+
+- `title` — a human-readable label. With `source`, it identifies the entry, which is how a re-import
+  knows an edit from a new entry.
+- `scope_level` — `continental`, `regional`, `local` or `faction`. Descriptive; the tags decide access.
+- `scope_tags` — the list deciding who can reach it. Empty means everyone.
+- `content` — the lore text.
 
 ---
 
-## Importing Lore
+## Getting lore into the game
 
-The importer is a **standalone Python tool** in [`tools/`](tools/). It
-talks directly to the game's `ai_memory` database via psycopg
-(Postgres) or sqlite3 (local SQLite) — no Django, no Evennia
-dependency. The same script runs locally for development and on
-Railway in production.
+A superuser runs:
 
-**Why standalone:** the Railway game container does not include this
-lore repo, so an in-game management command can never see the YAML
-files in production. Decoupling lets the importer deploy as its own
-Railway service in the same project as the game, sharing
-`DATABASE_URL` and `OPENAI_API_KEY` via Railway service references.
-
-### Local usage
-
-```bash
-cd tools
-python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env               # edit OPENAI_API_KEY (DATABASE_URL defaults to local SQLite)
-set -a; source .env; set +a        # Windows PowerShell: see tools/README.md
-python import_lore.py
+```
+lore import
 ```
 
-**Flags:**
-- `python import_lore.py` — full import, embeds new/changed entries
-- `python import_lore.py --dry-run` — preview, no DB writes, no OpenAI calls
-- `python import_lore.py --prune` — also delete DB entries no longer present in YAML (off by default — accidental file deletion would otherwise wipe live lore)
+It reads this repository, validates all of it, and brings the lore table into line. New entries are
+created, edited ones re-embedded, unchanged ones left alone, and **entries no longer in the YAML are
+removed** — this repository is the source of truth, so the table mirrors it.
 
-**Idempotent.** Entries are matched on `(source, title)`:
-- New entry → created and embedded
-- Content changed → updated and re-embedded
-- Content unchanged → skipped (no wasted API calls)
+Nothing is written unless every entry validates. Adding lore is therefore safe to attempt: a mistake
+refuses the run and reports what was wrong, rather than half-importing.
 
-The game server does not need to be running. After import, all NPCs
-with `llm_use_lore=True` immediately have access to the new knowledge
-— no restart required.
+```
+lore import dry
+```
 
-### Railway deployment
-
-The tool is deployed as a separate Railway service in the same project
-as the game. Each push to this lore repo auto-triggers a fresh deploy
-that runs the import and exits.
-
-**One-time setup in the Railway dashboard:**
-
-1. **+ New Service → GitHub Repo → FullCircleMUD/lore**
-2. **Settings → Service:**
-   - Root directory: `tools/`
-   - Start command: `python import_lore.py`
-   (Or rely on the [`railway.toml`](railway.toml) at the repo root,
-   which sets these declaratively.)
-3. **Settings → Variables:** add two variables, both as **references**
-   to the game service's variables of the same name (so they always
-   match, no copy/paste):
-   - `DATABASE_URL` → reference game service's `DATABASE_URL`
-   - `OPENAI_API_KEY` → reference game service's `LLM_EMBEDDING_API_KEY`
-4. **Settings → Deploy:** auto-deploy on push to `main`.
-5. Trigger the first deploy. Watch logs — should report
-   `Created: N` and exit code 0.
-
-**Each subsequent push** to this repo auto-deploys the service, which
-re-runs `import_lore.py`. Unchanged entries are skipped, so it's cheap.
-Railway marks the deployment as "Removed" after the script exits —
-that's the standard pattern for one-shot jobs.
-
-**Important:** the standalone tool depends on a unique constraint
-`(source, title)` on the `ai_memory_lorememory` table. That constraint
-is added by game-side migration
-`ai_memory/0005_lorememory_unique_source_title.py`. Apply that
-migration on the game service first (it's part of `deploy_migrate.py`)
-before deploying this lore service for the first time.
-
-See [tools/README.md](tools/README.md) for full troubleshooting notes.
+reports what would change and stops, which is worth doing before a large edit.
 
 ---
 
-## Writing Good Lore Entries
+## Writing good lore entries
 
-Each entry should be **focused and self-contained** — one topic per entry, roughly paragraph-length (3-6 sentences). This matters for embedding quality:
+Each entry should be **focused and self-contained** — one topic, roughly paragraph-length. This matters
+for embedding quality:
 
-- **Too short** ("Millholm is a town") — weak embedding, matches too many queries
-- **Too long** (entire history in one entry) — relevant details buried in noise
-- **Right size** — a paragraph covering one specific topic, place, person, or event
+- **Too short** ("Millholm is a town") — weak embedding, matches too many questions.
+- **Too long** (an entire history in one entry) — the relevant sentence is buried.
+- **Right size** — a paragraph on one specific topic, place, person or event.
 
-Write as factual knowledge, not as narrative prose. The NPC's personality template determines how they deliver the information — a bartender turns it into gossip, a scholar turns it into a lecture. The lore entry just provides the facts.
+Write facts, not narration. The NPC's personality template decides the delivery: a bartender turns a
+fact into gossip, a scholar into a lecture. The entry supplies only what is true.
 
 ---
 
-## Scope Tags Reference
+## Scope tags in use
 
-Tags correspond to Evennia room tags and NPC faction tags set in the game code:
+Tags match Evennia room tags and NPC faction tags set in the game.
 
-| Tag | Category | Set On | Who Gets This Lore |
+| Tag | Category | Set on | Reaches |
 |---|---|---|---|
-| `millholm` | zone | Rooms | All NPCs in Millholm zone |
-| `millholm_town` | district | Rooms | NPCs in town centre |
+| `millholm` | zone | Rooms | Every NPC in the Millholm zone |
+| `millholm_town` | district | Rooms | NPCs in the town centre |
 | `millholm_farms` | district | Rooms | NPCs on the farms |
 | `millholm_woods` | district | Rooms | NPCs in the woods |
-| `millholm_southern` | district | Rooms | NPCs in southern district |
+| `millholm_southern` | district | Rooms | NPCs in the southern district |
 | `millholm_sewers` | district | Rooms | NPCs in the sewers |
 | `millholm_cemetery` | district | Rooms | NPCs in the cemetery |
 | `mages_guild` | faction | NPCs | Mages Guild members |
 | `thieves_guild` | faction | NPCs | Thieves Guild members |
-| `temple` | faction | NPCs | Temple/Cleric members |
+| `temple` | faction | NPCs | Temple and cleric members |
 | `warriors_guild` | faction | NPCs | Warriors Guild members |
 
-Geographic tags (zone, district) are inherited from the NPC's room automatically. Faction tags are set explicitly on the NPC during spawning.
+Geographic tags are inherited from the NPC's room. Faction tags are set on the NPC when it spawns.

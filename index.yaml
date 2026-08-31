@@ -1,0 +1,21 @@
+# The manifest. Names every content file in this repository.
+#
+# A file not listed here is not imported — the importer reads named paths and
+# does not enumerate, so this list is what the repository consists of. Add a
+# new lore file here in the same commit that adds the file, or the game will
+# never see it.
+#
+# A file listed here but missing stops the import, which is deliberate: it
+# catches a deletion that forgot this list, where enumeration could not tell
+# the difference between a file removed and a file that never existed.
+
+sources:
+  - continental.yaml
+  - factions/mages_guild.yaml
+  - factions/merry_bandits.yaml
+  - factions/temple.yaml
+  - factions/thieves_guild.yaml
+  - factions/warriors_guild.yaml
+  - millholm/millholm_town.yaml
+  - millholm/raven_sage.yaml
+  - millholm/regional.yaml

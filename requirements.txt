@@ -1,4 +1,0 @@
-# Root-level stub so Nixpacks' Python provider auto-detects the
-# project as Python and installs pip properly. The real deps live in
-# tools/requirements.txt alongside the importer script.
--r tools/requirements.txt

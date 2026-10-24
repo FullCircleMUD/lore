@@ -11,11 +11,13 @@
 
 sources:
   - continental.yaml
+  - factions/fey.yaml
   - factions/mages_guild.yaml
   - factions/merry_bandits.yaml
   - factions/temple.yaml
   - factions/thieves_guild.yaml
   - factions/warriors_guild.yaml
+  - millholm/faerie_hollow.yaml
   - millholm/millholm_town.yaml
   - millholm/raven_sage.yaml
   - millholm/regional.yaml

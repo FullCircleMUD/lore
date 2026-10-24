@@ -1,0 +1,50 @@
+source: "millholm/faerie_hollow.yaml"
+entries:
+  - title: "The Hollow Before Millholm"
+    scope_level: local
+    scope_tags: ["faerie_hollow"]
+    content: |
+      The faerie court of the hollow has dwelt in the deep woods north
+      of Millholm since long before the four founding families arrived.
+      The hollow lies where ley lines run close beneath the ground, and
+      the old magic rising there is what makes the oaks glow silver-green,
+      the moss pulse with light and the crystals grow in the grotto.
+      The court is bound to the hollow and never leaves the woods around
+      it.
+
+  - title: "The Hollow in the Shadow War"
+    scope_level: local
+    scope_tags: ["faerie_hollow"]
+    content: |
+      When the great shadow spread across the continent over two
+      thousand years ago, the court hid the hollow under a glamour so
+      that nothing of the shadow could find it. The court survived the
+      war that way, and has never lifted the glamour since. The way in
+      from the deep woods is still hidden, and only those who can see
+      the invisible find it. The court remembers the war, and does not
+      trust what mortals have done with the world since.
+
+  - title: "The Court and the Town"
+    scope_level: local
+    scope_tags: ["faerie_hollow"]
+    content: |
+      The court watches Millholm with amused contempt. Its woodcutters
+      tell tales of strange lights and hidden clearings, and few in the
+      town believe them. The mages of Millholm know better: they send
+      their initiates to the hollow to collect arcane dust, as a trial
+      of curiosity and respect. The court tolerates these visitors when
+      they are polite, plays with them when they are foolish, and
+      destroys them when they are greedy or violent.
+
+  - title: "The Arcane Dust"
+    scope_level: local
+    scope_tags: ["faerie_hollow"]
+    content: |
+      Arcane dust is shed by the pale crystals in the Crystalline
+      Grotto, a shallow cave behind a curtain of hanging roots beside
+      the Faerie Hollow. It is fine as flour, faintly luminous, and
+      gathers on the grotto's stone as the crystals grow. It can be
+      gathered there, and nowhere else in these woods. The court
+      regards the dust as a gift of the hollow, to be taken with
+      permission and in moderation. Breaking a crystal is an offence
+      the court will never forgive.

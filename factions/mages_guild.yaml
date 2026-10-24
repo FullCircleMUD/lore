@@ -30,7 +30,7 @@ entries:
     scope_tags: ["mages_guild", "millholm"]
     content: |
       Arcane dust is a rare and valuable magical reagent found only
-      in a hidden faerie hollow deep in the woods north of Millholm.
+      in a hidden faerie hollow in the deep woods east of Millholm.
       The hollow is concealed by powerful glamour — only those who
       can see through illusions will find the entrance. The faeries
       who dwell there are ancient and powerful. They tolerate
@@ -38,6 +38,18 @@ entries:
       or greed. Guild initiates are sent to collect arcane dust as
       their entrance trial — it tests curiosity and respect, not
       brute force.
+
+  - title: "The Guild's Secret"
+    scope_level: faction
+    scope_tags: ["mages_guild", "millholm"]
+    content: |
+      The faerie court and its arcane dust are a secret of the guild.
+      Members speak of them only to other members, never to outsiders,
+      however they are asked. The guild knows the court lies somewhere
+      in the woods east of Millholm, but no one knows exactly where.
+      Those who have found it came across it by wandering in the
+      woods, and few have found it twice. Initiates learn of the court
+      only when they are sent to seek it for their trial.
 
   - title: "Magical Theory Fundamentals"
     scope_level: faction

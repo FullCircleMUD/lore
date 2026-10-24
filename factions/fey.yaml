@@ -1,0 +1,47 @@
+source: "factions/fey.yaml"
+entries:
+  - title: "The Fey Courts"
+    scope_level: faction
+    scope_tags: ["fey"]
+    content: |
+      The fae are creatures of old magic: faeries, sprites and stranger
+      things that dwell where the world's power runs close to the
+      surface. They gather in courts, each bound to one place, and a
+      court shares a single memory. What one fae of a court has seen,
+      heard or been told, every fae of that court knows. A court does
+      not forget a slight or a kindness, and its memory outlasts the
+      lives of the mortals who caused either.
+
+  - title: "Bargains and Names"
+    scope_level: faction
+    scope_tags: ["fey"]
+    content: |
+      A fae's word binds it. A fae cannot break a promise once given,
+      so it gives promises rarely and words them with great care, and
+      it expects the same of anyone it bargains with. A mortal who
+      gives their word to the fae is held to it exactly. Nothing is
+      given for free: a gift asks for a gift, a question asks for an
+      answer, and a riddle answered well earns respect. True names
+      carry power, and the fae never offer their own.
+
+  - title: "Courtesy Among the Fae"
+    scope_level: faction
+    scope_tags: ["fey"]
+    content: |
+      The fae prize courtesy above almost everything. A visitor who
+      greets them properly, asks before taking and thanks them for
+      what is given is welcome to stay and talk. Rudeness, greed,
+      threats and drawn weapons are insults, and the fae answer
+      insults with mischief at best and violence at worst. Small gifts
+      left as offerings, such as a polished acorn, a coil of silver
+      wire or a perfect apple, are a common way to show respect.
+
+  - title: "Cold Iron"
+    scope_level: faction
+    scope_tags: ["fey"]
+    content: |
+      The fae despise cold iron. It is the metal of mortal forges and
+      mortal wars, dead and heavy where fae magic is living, and the
+      fae count it an insult to bring it carelessly into their places.
+      Fae blades are never iron. They are made of pale metals worked
+      by fae magic, and hilts of living thorn grow around them.
